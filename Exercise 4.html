@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Avocado Layout 3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+        }
+
+        .nav {
+            background-color: #D8E7D6;
+            flex: 1;
+        }
+        .main-container {
+            display: flex;
+            flex: 4;
+            flex-direction: column;
+            flex-basis: 10%;
+        }
+        header,
+        article,
+        aside,
+        footer {
+            padding: 15px;
+        }
+
+        header,
+        footer {
+            background-color: yellowgreen;
+            height: 20vh;
+        }
+
+        .middle-container {
+            display: flex;
+        }
+        .middle-container > article {
+            flex: 1.5;
+            min-height: 60vh;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: beige;
+            margin: 20px;
+        }
+        .middle-container > aside {
+            background-color: beige;
+            flex: 1;
+        }
+        @media screen and (max-width: 675px) {
+    .middle-container {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- group container-->
+    <div class="main-container">
+        <header>
+            <h1>Header</h1>
+        </header>
+        
+        
+        <!--middle container-->
+        <div class=middle-container>
+            <article>
+            <div>
+                <label for="name">Name</label>
+                    <input type="text" id="Name" name="Name"><br><br>
+                    <label for="Phone">Phone</label>
+                    <input type="text" id="lname" name="lastname"><br><br>
+                    <label for="Email">Email</label>
+                    <input type="text" id="Email" name="Email"><br><br>
+                    <label for="Pickup Date/Time">Pickup date/time:</label>
+                    <input type="datetime-local" id="Pickup Date/Time" name="Pickup Date/Time"><br><br>
+
+                    <!--pick up  place-->
+                    <label for="Pickup place">Pickup Place:</label>
+                    <select name="place" id="place">
+                        <option value=""></option>
+                        <option value="Boracay">Boracay</option>
+                        <option value="Palawan">Palawan</option>
+                        <option value="Bohol">Bohol</option>
+                    </select><br><br>
+
+                    <!--drop off-->
+                    <label for="Dropoff Place">Dropoff</label>
+                    <input type="text" id="Dropoff" name="Dropoff"><br><br>
+          
+            </div>
+        </article>
+        <article>
+            <div>
+                <label for="Question 1">What vehicle do you require?</label><br>
+                <input type="radio" name="Van" value="Van">Van<br>
+                <input type="radio" name="Jeepney" value="Jeepney">Jeepney<br>
+                <input type="radio" name="Tricycle" value="Tricycle">Tricycle<br>
+
+                <!--Extras-->
+                <p>Extras</p>
+                <input type="checkbox" id="Baby Seat" name="Baby Seat" value="Baby Seat">
+                <label for="Baby Seat">Baby Seat</label><br>
+                <input type="checkbox" id="Wheelchair Access" name="Wheelchair Access" value="Wheelchair Access">
+                <label for="Wheelchair Access">Wheelchair Access</label><br>
+                <input type="checkbox" id="Stock tip" name="Stock tip" value="Stock tip">
+                <label for="Stock tip">Stock tip</label><br><br>
+                <button type="submit" form="Submit Booking" value="Submit Booking">Submit Booking</button>
+            </div>
+        </article>
+
+            <aside>
+                <h1>Aside</h1>
+            </aside>
+            <nav class="nav">
+                <h1>Nav</h1>
+            </nav>
+
+        </div>
+        <footer>
+            <h1>footer</h1>
+        </footer>
+    </div>
+
+</body>
+</html>
